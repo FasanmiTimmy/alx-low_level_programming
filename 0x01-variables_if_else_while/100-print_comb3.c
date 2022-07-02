@@ -6,23 +6,28 @@
  */
 int main(void)
 {
-int c, i;
-c = i = '0';
-for (c = '0'; c <= '9'; c++)
+int i, e;
+i = 48;
+e = 48;
+while (e < 58)
 {
-for (i = '0'; i <= '9'; i++)
+i = 48;
+while (i < 58)
 {
-if (c < i)
+if (e != i && e < i)
 {
-putchar(c);
+putchar(e);
 putchar(i);
-if ((c != '9') || (c == '9' && i != '9'))
+if (i == 57 && e == 56)
 {
+break;
+}
 putchar(',');
 putchar(' ');
 }
+i++;
 }
-}
+e++;
 }
 putchar('\n');
 return (0);
